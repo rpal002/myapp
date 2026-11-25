@@ -1,5 +1,6 @@
 import React from 'react';
 import { View, Text, Button, Image, StyleSheet, ScrollView } from 'react-native';
+import Rating from './Rating';
 
 function Productitem({ item }) {
     const instock_style={backgroundColor:"cadetblue"}
@@ -23,7 +24,7 @@ function Productitem({ item }) {
                 <Text>{item.brand}</Text>
                 {item.category==="electronics"&&<Text>Flat 50% off</Text>}
                 <Text>Rs.{item.price}</Text>
-                
+                <Rating rating={item.rating} />
                 <View
                 style={mystyle.btn_container}
                 >
